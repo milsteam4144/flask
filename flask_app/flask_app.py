@@ -19,6 +19,9 @@ def betty():
     return render_template("betty.html", name = "Betty Boo", title = "My Fluffy Ragdolls", adjective = "Sweet", \
                            gender = "Girl")
 
+@app.route("/results")
+def results():
+    return render_template("results.html")
 
 #The survey page that contains a form
 #You need the GET and POST methods to submit the info the user gives in the form
@@ -40,15 +43,8 @@ def survey():
     else:
         return render_template("survey.html")
     
-@app.route("/results")
-def results():
-    return render_template("results.html")
+
             
-    
-
-
-
-
 
 #Run the code and flask
 if __name__ == '__main__':
