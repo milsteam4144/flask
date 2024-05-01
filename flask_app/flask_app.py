@@ -42,7 +42,7 @@ def survey():
         
         return render_template("results.html")
     else:
-        return render_template(url_for("survey"))
+        return render_template("survey.html")
             
     
 
