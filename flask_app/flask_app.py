@@ -26,14 +26,16 @@ def betty():
 def survey():
     #If the user clicks Submit to send info to the server
     if request.method == 'POST':
-            #Grab the data from the form and save in variables
-            user_name = request.form['name']
-            user_pets = request.form['my_pets']
+        #Grab the data from the form and save in variables
+        user_name = request.form['name']
+        user_pets = request.form['my_pets']
 
-            if not user_name:
-                flash('Name is required!')
-            elif not user_pets:
-                flash('Some content is required!')
+        if not user_name:
+            flash('Name is required!')
+        elif not user_pets:
+            flash('Some content is required!')
+        else:
+            return redirect(url_for(survey))
             
     #Split the user's form input into a list of words
     user_string = user_pets.split(" ")
