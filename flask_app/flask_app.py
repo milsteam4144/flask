@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, url_for, redirect
 
 #This creates a new Flask object (application) named app
 app = Flask(__name__)
