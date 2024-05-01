@@ -40,7 +40,7 @@ def survey():
             print(user_string)
             return redirect(url_for('results'))
         
-        return render_template("results.html", display_info = user_string)
+        return render_template("results.html")
             
     
 
