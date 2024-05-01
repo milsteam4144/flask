@@ -8,7 +8,14 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template(index.html, name = "CSC 221 Students" title = "My Fluffy Ragdolls")
+    return render_template("index.html", name = "CSC 221 Students", title = "My Fluffy Ragdolls")
+
+
+
+#Run the code and flask
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
 
 
 
