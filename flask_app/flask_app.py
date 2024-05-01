@@ -14,6 +14,13 @@ def index():
 def william():
     return render_template("william.html", name = "William", title = "My Fluffy Ragdolls")
 
+@app.route("/betty")
+def betty():
+    return render_template("betty.html", name = "Betty", title = "My Fluffy Ragdolls", adjective = "Sweet", \
+                           gender = "Girl")
+
+
+
 
 
 
