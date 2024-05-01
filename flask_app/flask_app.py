@@ -10,6 +10,11 @@ app = Flask(__name__)
 def index():
     return render_template("index.html", name = "CSC 221 Students", title = "My Fluffy Ragdolls")
 
+@app.route("/william")
+def william():
+    return render_template("william.html", name = "William", title = "My Fluffy Ragdolls")
+
+
 
 
 #Run the code and flask
