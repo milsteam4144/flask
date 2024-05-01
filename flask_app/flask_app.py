@@ -35,7 +35,7 @@ def survey():
         #Split the user's input into a list of words
         user_string = user_pets.split(" ")
         print(user_string)
-        return redirect(url_for("results", display_info = user_string))
+        return redirect(url_for("results", display_info = user_name))
         
     else:
         return render_template("survey.html")
