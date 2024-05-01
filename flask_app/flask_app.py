@@ -16,7 +16,7 @@ def william():
 
 @app.route("/betty")
 def betty():
-    return render_template("betty.html", name = "Betty", title = "My Fluffy Ragdolls", adjective = "Sweet", \
+    return render_template("betty.html", name = "Betty Boo", title = "My Fluffy Ragdolls", adjective = "Sweet", \
                            gender = "Girl")
 
 
