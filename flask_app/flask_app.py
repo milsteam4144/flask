@@ -21,7 +21,7 @@ def betty():
 
 @app.route("/results")
 def results():
-    return render_template("results.html")
+    return "Hello"
 
 #The survey page that contains a form
 #You need the GET and POST methods to submit the info the user gives in the form
