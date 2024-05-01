@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body style="background-color:lightgoldenrodyellow">
+        <a style="color:black" href="{{ url_for('index') }}">Home</a>
+        <a style="color:black" href="{{ url_for('william') }}">William</a>
+        <a style="color:black" href="{{ url_for('betty') }}">Betty</a>
+        <a style="color:black" href="{{ url_for('survey') }}">Take our survey</a>
+
+
+        
+        <h2>TThanks for the response!</h2>
+        <br>
+        <p>{{ user_info }}</p>
+    </body>
+</html>

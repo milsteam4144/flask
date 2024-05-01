@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask, render_template, request, url_for, redirect, flash
 
 #This creates a new Flask object (application) named app
 app = Flask(__name__)
@@ -21,9 +21,26 @@ def betty():
 
 
 #The survey page that contains a form
+#You need the GET and POST methods to submit the info the user gives in the form
 @app.route('/survey', methods=('GET', 'POST'))
 def survey():
-    return render_template('survey.html')
+    #If the user clicks Submit to send info to the server
+    if request.method == 'POST':
+            #Grab the data from the form and save in variables
+            user_name = request.form['name']
+            user_pets = request.form['my_pets']
+
+            if not user_name:
+                flash('Name is required!')
+            elif not user_pets:
+                flash('Some content is required!')
+            else:
+                #Split the user's form input into a list of words
+                user_string = user_pets.split(" ")
+                print(user_string)
+                return redirect(url_for('results'))
+
+
 
 
 
