@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 #This creates a new Flask object (application) named app
 app = Flask(__name__)
@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    return "Hello, World!"
+    return render_template(index.html, name = "CSC 221 Students" title = "My Fluffy Ragdolls")
 
 
 
