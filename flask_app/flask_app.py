@@ -22,6 +22,8 @@ def betty():
 
 #The survey page that contains a form
 #You need the GET and POST methods to submit the info the user gives in the form
+#YouTube video explaining GET vs POST
+
 @app.route('/survey', methods=('GET', 'POST'))
 def survey():
     #If the user clicks Submit to send info to the server
@@ -30,17 +32,11 @@ def survey():
         user_name = request.form['name']
         user_pets = request.form['my_pets']
 
-        if not user_name:
-            flash('Name is required!')
-        elif not user_pets:
-            flash('Some content is required!')
-        else:
-            #Split the user's form input into a list of words
-            user_string = user_pets.split(" ")
-            print(user_string)
-            return render_template("results.html")
+        #Split the user's input into a list of words
+        user_string = user_pets.split(" ")
+        print(user_string)
+        return redirect(url_for("results", display_info = user_string))
         
-        return render_template("results.html")
     else:
         return render_template("survey.html")
             
