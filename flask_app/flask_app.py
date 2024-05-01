@@ -35,12 +35,12 @@ def survey():
         elif not user_pets:
             flash('Some content is required!')
         else:
-            return redirect(url_for(survey))
+            #Split the user's form input into a list of words
+            user_string = user_pets.split(" ")
+            print(user_string)
+            return render_template("results.html", display_info = user_string)
             
-    #Split the user's form input into a list of words
-    user_string = user_pets.split(" ")
-    print(user_string)
-    return render_template("results.html", display_info = user_string)
+    
 
 
 
