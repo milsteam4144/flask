@@ -39,6 +39,10 @@ def survey():
         
     else:
         return render_template("survey.html")
+    
+@app.route("/results")
+def results():
+    return render_template("results.html")
             
     
 
