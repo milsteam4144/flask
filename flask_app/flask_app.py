@@ -39,6 +39,8 @@ def survey():
             user_string = user_pets.split(" ")
             print(user_string)
             return render_template("results.html", display_info = user_string)
+        
+        return render_template("results.html", display_info = user_string)
             
     
 
