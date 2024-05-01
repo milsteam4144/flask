@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body style="background-color:lightgreen">
+<form method="post">
+    <label for="title">Title</label>
+    <br>
+    <input type="text" name="title"
+           placeholder="Message title"
+           value="{{ request.form['title'] }}"></input>
+    <br>
+
+    <label for="your_pets">Tell us about your pets:</label>
+    <br>
+    <textarea name="your_pets"
+              placeholder="Message content"
+              rows="15"
+              cols="60"
+              >{{ request.form['your_pets'] }}</textarea>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

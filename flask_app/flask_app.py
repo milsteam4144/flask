@@ -20,7 +20,10 @@ def betty():
                            gender = "Girl")
 
 
-
+#The survey page that contains a form
+@app.route('/survey', methods=('GET', 'POST'))
+def survey():
+    return render_template('survey.html')
 
 
 
