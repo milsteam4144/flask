@@ -21,7 +21,9 @@ def betty():
 
 @app.route("/results", methods=["POST"])
 def results():
-    return render_template('results.html')
+    user_name = request.form['name']
+    user_pets = request.form.get('textarea')
+    return render_template('results.html', display_info = user_name)
 
 
 #The survey page that contains a form
