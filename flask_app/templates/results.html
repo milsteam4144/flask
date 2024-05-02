@@ -11,6 +11,9 @@
 
         <h2>Thanks for the response!</h2>
         <br>
-        <p>{{ display_info }}</p>
+        {% if name %}
+        <p>Hello, {{ name }}</p>
+        {% else %}
+        <p>Hello, mysterious person with no name</p>
     </body>
 </html>

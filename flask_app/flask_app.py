@@ -19,17 +19,16 @@ def betty():
     return render_template("betty.html", name = "Betty Boo", title = "My Fluffy Ragdolls", adjective = "Sweet", \
                            gender = "Girl")
 
+#The results from the form's POST method are shown on this page
 @app.route("/results", methods=["POST"])
 def results():
     user_name = request.form['name']
     user_pets = request.form.get('textarea')
-    return render_template('results.html', display_info = user_name)
+    return render_template('results.html', name = user_name)
 
 
 #The survey page that contains a form
 #You need the GET and POST methods to submit the info the user gives in the form
-#YouTube video explaining GET vs POST
-
 @app.route('/survey', methods=('GET', 'POST'))
 def survey():
     return render_template("survey.html")
