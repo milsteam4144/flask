@@ -24,7 +24,9 @@ def betty():
 def results():
     user_name = request.form['name']
     user_pets = request.form['your_pets']
-    pets_string = user_pets.split(" ")
+    print(user_pets)
+    pets_string = user_pets.rstrip(".").split(" ")
+    print(pets_string)
     pet_types = ['dog', 'dogs', 'cat', 'cats', 'bird', 'fish', 'snake']
     for item in pet_types:
         if item in pets_string:
