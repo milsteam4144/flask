@@ -30,7 +30,8 @@ def results():
     pet_types = ['dog', 'dogs', 'cat', 'cats', 'bird', 'fish', 'snake']
     for item in pet_types:
         if item in pets_string:
-                return render_template('results.html', name = user_name, your_pets = f"You have a pet {item}")
+                pet_type = item
+                return render_template('results.html', name = user_name, your_pets = f"You have a pet {item}", pet_type = pet_type)
     return render_template('results.html', name = user_name, your_pets = "It doesn't look like you have any pets")
 
 

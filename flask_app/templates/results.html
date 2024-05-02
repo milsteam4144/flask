@@ -17,6 +17,9 @@
             <p>Hello, mysterious person with no name</p>
         {% endif %}
 
+        {% if pet_type == "dog" or pet_type == "dogs" %}
+        <img src="static/images/dogs.jpg">
+
         <p>{{ your_pets }}</p>
     </body>
 </html>
