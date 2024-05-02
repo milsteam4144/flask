@@ -32,24 +32,10 @@ def results():
 
 @app.route('/survey', methods=('GET', 'POST'))
 def survey():
-    #If the user clicks Submit to send info to the server
-    if request.method == 'POST':
-        #Grab the data from the form and save in variables
-        user_name = request.form['name']
-        user_pets = request.form.get('textarea')
-
-        #Split the user's input into a list of words
-        #user_string = user_pets.split(" ")
-        #print(user_string)
-        return redirect(url_for("results", display_info = user_name))
-        
-    else:
-        return render_template("survey.html")
-    
-
+    return render_template("survey.html")
             
 
-#Run the code and flask
+#Run the code and flask with debugging on
 if __name__ == '__main__':
     app.debug = True
     app.run()
