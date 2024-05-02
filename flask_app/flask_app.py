@@ -23,7 +23,7 @@ def betty():
 @app.route("/results", methods=["POST"])
 def results():
     user_name = request.form['name']
-    user_pets = request.form.get('textarea')
+    user_pets = request.form['your_pets']
     pets_string = user_pets.split(" ")
     pet_types = ['dog', 'dogs', 'cat', 'cats', 'bird', 'fish', 'snake']
     for item in pet_types:
