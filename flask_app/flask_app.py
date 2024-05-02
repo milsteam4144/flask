@@ -24,7 +24,12 @@ def betty():
 def results():
     user_name = request.form['name']
     user_pets = request.form.get('textarea')
-    return render_template('results.html', name = user_name)
+    pets_string = user_pets.split(" ")
+    pet_types = ['dog', 'dogs', 'cat', 'cats', 'bird', 'fish', 'snake']
+    for item in pet_types:
+        if item in pets_string:
+                return render_template('results.html', name = user_name, your_pets = f"You have a pet {item}")
+    return render_template('results.html', name = user_name, your_pets = "It doesn't look like you have any pets")
 
 
 #The survey page that contains a form
