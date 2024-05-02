@@ -21,7 +21,7 @@ def betty():
 
 @app.route("/results")
 def results():
-    return "Hello"
+    return render_template('results.html')
 
 #The survey page that contains a form
 #You need the GET and POST methods to submit the info the user gives in the form
@@ -33,7 +33,7 @@ def survey():
     if request.method == 'POST':
         #Grab the data from the form and save in variables
         user_name = request.form['name']
-        user_pets = request.form['my_pets']
+        user_pets = request.form.get('textarea')
 
         #Split the user's input into a list of words
         #user_string = user_pets.split(" ")
