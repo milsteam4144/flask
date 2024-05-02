@@ -19,9 +19,9 @@
 
         {% if pet_type == "dog" or pet_type == "dogs" %}
         <img src="static/images/dogs.jpg">
-        {% if pet_type == "cat" or pet_type == "cats" %}
+        {% elif pet_type == "cat" or pet_type == "cats" %}
         <img src="static/images/dogs.jpg">
-        {% if pet_type == "fish" %}
+        {% else pet_type == "fish" %}
         <img src="static/images/fish.jpg">
         {% endif %}
 
