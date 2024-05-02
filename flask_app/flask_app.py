@@ -19,7 +19,7 @@ def betty():
     return render_template("betty.html", name = "Betty Boo", title = "My Fluffy Ragdolls", adjective = "Sweet", \
                            gender = "Girl")
 
-@app.route("/results")
+@app.route("/results", methods=["POST"])
 def results():
     return render_template('results.html')
 
